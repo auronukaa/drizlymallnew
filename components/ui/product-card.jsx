@@ -26,8 +26,8 @@ const ProductCard = ({ data }) => {
           </span>
         </div>
         {data?.attributes?.stock === 1 && (
-          <div className="absolute flex items-center justify-center w-full h-full z-10 font-semibold bg-soldout">
-            <span className="bg-black rounded-md px-4 py-2 uppercase text-sm text-white">
+          <div className="absolute inset-0 h-full w-full flex justify-center items-center z-50">
+            <span className="bg-black rounded-md text-white py-1 px-2 md:px-4 md:py-2 z-50 text-sm md:text-lg capitalize">
               Jashtë Stokut
             </span>
           </div>

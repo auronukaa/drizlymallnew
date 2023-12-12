@@ -47,6 +47,7 @@ const Info = ({ data }) => {
         <div className="flex justify-between items-center sm:hidden fixed w-full h-[65px] z-50 bottom-0 left-0 bg-white border-t border-gray-200">
           <div className="flex justify-between w-full items-center px-4 py-2 gap-x-4">
             <button
+              disabled={data?.attributes?.stock === 1}
               onClick={onCheckout}
               className="flex rounded-sm border-2 border-orange-600 bg-orange-600 border-transparent px-5 z-1 py-3 disabled:cursor-not-allowed disabled:opacity-50 text-white font-semibold
           hover:opacity-75 transition w-[80%] justify-center text-sm sm:w-auto items-center gap-x-2 "
@@ -54,6 +55,7 @@ const Info = ({ data }) => {
               Blej menjëherë
             </button>
             <button
+              disabled={data?.attributes?.stock === 1}
               className="flex text-sm items-center gap-x-2 bg-gray-100 w-fit justify-center sm:w-auto rounded-sm px-5 py-3 disabled:cursor-not-allowed disabled:opacity-50 text-black font-semibold
           hover:opacity-75 hover:bg-black hover:text-white transition"
               onClick={onAddToCart}
@@ -122,6 +124,7 @@ const Info = ({ data }) => {
 
         <div className="flex items-center w-full justify-center sm:justify-start mb-5">
           <button
+            disabled={data?.attributes?.stock === 1}
             className="bg-transparent border border-gray-300 border-r-0 h-10 w-full flex items-center sm:w-fit px-4 rounded-tl-md rounded-bl-md"
             type="button"
             onClick={() => setQty(qty - 1)}
@@ -141,6 +144,7 @@ const Info = ({ data }) => {
           />
 
           <button
+            disabled={data?.attributes?.stock === 1}
             className="bg-transparent border border-gray-300 h-10 w-full border-l-0  flex items-center sm:w-fit px-4 rounded-tr-md rounded-br-md"
             type="button"
             onClick={() => setQty(qty + 1)}
@@ -162,6 +166,7 @@ const Info = ({ data }) => {
         </div>
         <div className="mt-3 hidden sm:flex flex-col sm:flex-row items-center gap-x-3 gap-y-6">
           <button
+            disabled={data?.attributes?.stock === 1}
             onClick={onCheckout}
             className="flex rounded-sm border-2 border-orange-600 bg-orange-600 border-transparent px-5 z-1 py-3 disabled:cursor-not-allowed disabled:opacity-50 text-white font-semibold
           hover:bg-orange-700 transition w-full justify-center text-lg sm:w-full items-center gap-x-2 "
@@ -169,6 +174,7 @@ const Info = ({ data }) => {
             Blej menjëherë
           </button>
           <button
+            disabled={data?.attributes?.stock === 1}
             className="flex text-lg items-center gap-x-2 bg-transparent border-2 w-full border-black justify-center sm:w-full rounded-sm px-5 py-3 disabled:cursor-not-allowed disabled:opacity-50 text-black font-semibold
            hover:bg-black hover:text-white transition"
             onClick={onAddToCart}
