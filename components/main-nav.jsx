@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 
 import { usePathname } from "next/navigation";
+import { Input } from "@/components/ui/input";
 
 const MainNav = () => {
   const pathname = usePathname();
@@ -16,7 +17,7 @@ const MainNav = () => {
     },
   ];
   return (
-    <nav className="mx-8 hidden sm:flex items-center space-x-4 lg:space-x-6">
+    <nav className="items-center hidden mx-8 space-x-4 sm:flex lg:space-x-6">
       {data.map((item) => {
         return (
           <Link
@@ -31,6 +32,9 @@ const MainNav = () => {
           </Link>
         );
       })}
+      {/* <div className="flex items-center justify-center">
+        <Input type="text" placeholder="Kerko Produktet ..." />
+      </div> */}
     </nav>
   );
 };

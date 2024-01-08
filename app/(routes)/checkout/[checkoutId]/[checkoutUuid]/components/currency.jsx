@@ -19,12 +19,12 @@ const Currency = ({ value, price, discount }) => {
   }
 
   return (
-    <div className="font-bold flex items-center">
-      <div className="text-2xl sm:text-3xl font-bold">
+    <div className="flex items-center font-bold">
+      <div className="text-2xl font-bold sm:text-3xl">
         {formatter.format(Number(value))}
       </div>
       {price && (
-        <div className="text-base text-neutral-400 line-through ml-2">
+        <div className="ml-2 text-base line-through text-neutral-400">
           {formatter.format(Number(price))}
           {discount && <span className="ml-2 text-black">-{discount}%</span>}
         </div>

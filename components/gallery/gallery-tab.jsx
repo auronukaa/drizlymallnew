@@ -10,11 +10,11 @@ const GalleryTab = ({ image }) => {
         image?.attributes?.infoimg?.data.map((img) => (
           <Tab
             key={img.id}
-            className="relative flex aspect-square cursor-pointer items-center justify-center rounded-md bg-white"
+            className="relative flex items-center justify-center bg-white rounded-md cursor-pointer aspect-square"
           >
             {({ selected }) => (
               <div>
-                <span className="absolute h-full w-full aspect-square inset-0 overflow-hidden rounded-md">
+                <span className="absolute inset-0 z-20 w-full h-full overflow-hidden rounded-md aspect-square">
                   <NextImage
                     fill
                     src={

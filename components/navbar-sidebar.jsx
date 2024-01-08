@@ -41,7 +41,7 @@ const NavbarSidebar = () => {
           <AlignLeft size={25} />
         </SheetTrigger>
         <SheetContent side="left">
-          <div className="grid grid-cols-1 gap-y-5 my-10 h-full">
+          <div className="grid h-full grid-cols-1 my-10 gap-y-5">
             <div className="flex flex-col gap-y-5">
               {data.map((item) => {
                 return (
@@ -60,11 +60,11 @@ const NavbarSidebar = () => {
               })}
             </div>
             <div className="flex flex-col justify-end h-[60%]">
-              <div className="flex gap-x-2 items-center">
+              <div className="flex items-center gap-x-2">
                 <Link
                   href="https://www.instagram.com/drizlymall/"
                   target="_blank"
-                  className="bg-neutral-200 rounded-full p-2"
+                  className="p-2 rounded-full bg-neutral-200"
                 >
                   <Instagram size={20} />
                 </Link>
@@ -87,10 +87,10 @@ const NavbarSidebar = () => {
                   </svg>
                 </Link>
               </div>
-              <p className="text-left my-3 text-xs text-gray-600">
+              <p className="my-3 text-xs text-left text-gray-600">
                 &copy; 2023 Drizlymall, Inc. Të gjitha të drejtat të rezervuara
               </p>
-              <p className={`font-bold text-2xl tracking-tight`}>
+              <p className={`font-bold text-2xl tracking-tighter`}>
                 drizly<span className="text-orange-500">mall</span>
               </p>
             </div>

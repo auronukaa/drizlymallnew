@@ -1,11 +1,11 @@
 import Navbar from "@/components/navbar";
 import "./globals.css";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Inter } from "next/font/google";
 import Footer from "@/components/footer";
 import ToastProvider from "@/provider/toast-provider";
 import Providers from "@/provider/providers";
 
-const inter = Plus_Jakarta_Sans({
+const inter = Inter({
   subsets: ["latin"],
 });
 

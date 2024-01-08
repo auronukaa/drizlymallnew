@@ -14,7 +14,7 @@ const CartItem = ({ data }) => {
 
   return (
     <li className="flex py-6 border-b">
-      <div className="relative h-24 w-24 rounded-md overflow-hidden sm:h-48 sm:w-48">
+      <div className="relative w-24 h-24 overflow-hidden rounded-md sm:h-48 sm:w-48">
         <Image
           fill
           src={
@@ -25,8 +25,8 @@ const CartItem = ({ data }) => {
           className="object-contain object-center"
         />
       </div>
-      <div className="relative ml-4 flex flex-1 flex-col justify-start sm:p-5 sm:ml-6">
-        <div className="absolute z-10 right-0 top-0">
+      <div className="relative flex flex-col justify-start flex-1 ml-4 sm:p-5 sm:ml-6">
+        <div className="absolute top-0 right-0 z-10">
           <IconButton onClick={onRemove} icon={<X size={15} />} />
         </div>
 
@@ -36,9 +36,9 @@ const CartItem = ({ data }) => {
               {data.attributes.title}
             </p>
           </div>
-          <div className="flex flex-col text-xs sm:text-sm mt-3 sm:mt-0">
+          <div className="flex flex-col mt-3 text-xs sm:text-sm sm:mt-0">
             {data?.type && (
-              <p className=" sm:border-l sm:border-gray-300 sm:pl-3 text-gray-500">
+              <p className="text-gray-500  sm:border-l sm:border-gray-300 sm:pl-3">
                 {data?.type}
               </p>
             )}
@@ -46,11 +46,15 @@ const CartItem = ({ data }) => {
           </div>
         </div>
 
-        <p className="text-gray-500 mb-3 sm:mb-0 sm:mt-14 text-xs sm:text-sm">
+        <p className="mb-3 text-xs text-gray-500 sm:mb-0 sm:mt-14 sm:text-sm">
           Sasia : {data?.quantity}
         </p>
         <Currency
-          value={data?.attributes?.priceDiscount * data.quantity}
+          value={
+            data?.attributes?.priceDiscount
+              ? data?.attributes?.priceDiscount * data.quantity
+              : data?.attributes?.price * data.quantity
+          }
           price={data?.attributes?.price * data.quantity}
         />
       </div>

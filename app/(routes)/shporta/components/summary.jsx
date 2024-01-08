@@ -15,18 +15,21 @@ const Summary = () => {
   };
 
   const total = items.reduce(
-    (acc, data) => acc + data.attributes.priceDiscount * data.quantity,
+    (acc, data) =>
+      data?.attributes?.priceDiscount
+        ? acc + data?.attributes?.priceDiscount * data.quantity
+        : acc + data?.attributes?.price * data.quantity,
     0
   );
 
   return (
-    <div className="mt-16 rounded-lg bg-gray-50 px-4 py-6 sm:p-6 lg:col-span-5 lg:mt-0 lg:p-8">
+    <div className="px-4 py-6 mt-16 rounded-lg bg-gray-50 sm:p-6 lg:col-span-5 lg:mt-0 lg:p-8">
       <h2 className="text-lg font-medium text-gray-900">
         Përmbledhja e porosisë
       </h2>
       <div className="mt-6 space-y-4">
-        <div className="flex items-center justify-between w-full border-t border-gray-200 pt-4">
-          <div className="text-base font-medium w-full text-gray-900">
+        <div className="flex items-center justify-between w-full pt-4 border-t border-gray-200">
+          <div className="w-full text-base font-medium text-gray-900">
             Totali i porosisë :
           </div>
           <div>

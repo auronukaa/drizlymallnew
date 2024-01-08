@@ -78,6 +78,34 @@ button {
   }
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+  background: #f3f4f6;
+  color: #000 !important;
+  width: 30px !important;
+  height: 30px !important;
+  border-radius: 50%;
+}
+
+.swiper-button-disabled {
+  display: none;
+  opacity: 0 !important;
+}
+
+.swiper-button-next {
+  padding-left: 2px !important;
+}
+
+.swiper-button-prev {
+  padding-right: 2px !important;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 12px !important;
+  font-weight: 900 !important;
+}
+
 @layer base {
   * {
     @apply border-border;

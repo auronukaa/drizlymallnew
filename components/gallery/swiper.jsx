@@ -14,14 +14,14 @@ import SwiperImages from "./swiper-images";
 
 const SwiperPanel = ({ images }) => {
   return (
-    <div className="mx-auto mt-6 w-full max-w-2xl lg:max-w-none relative">
+    <div className="relative w-full max-w-2xl mx-auto mt-6 lg:max-w-none">
       <Swiper
         style={{
-          "--swiper-pagination-color": "#FFBA08",
+          "--swiper-pagination-color": "#dd6b20",
           "--swiper-pagination-bullet-inactive-color": "#999999",
           "--swiper-pagination-bullet-inactive-opacity": "1",
-          "--swiper-pagination-bullet-size": "16px",
-          "--swiper-pagination-bullet-horizontal-gap": "6px",
+          "--swiper-pagination-bullet-size": "8px",
+          "--swiper-pagination-bullet-horizontal-gap": "4px",
         }}
         modules={[Pagination, A11y, Autoplay]}
         spaceBetween={50}
@@ -33,8 +33,8 @@ const SwiperPanel = ({ images }) => {
         pagination={{ clickable: true }}
       >
         {images.attributes.stock === 1 && (
-          <div className="absolute inset-0 h-full w-full flex justify-center items-center bg-gray-50 bg-opacity-60 z-50">
-            <span className="bg-black rounded-md text-white px-4 py-2 z-50 text-lg">
+          <div className="absolute inset-0 z-50 flex items-center justify-center w-full h-full bg-gray-50 bg-opacity-60">
+            <span className="z-50 px-4 py-2 text-lg text-white bg-black rounded-md">
               Jashtë Stokut
             </span>
           </div>

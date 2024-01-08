@@ -6,15 +6,15 @@ import TabPanelImage from "./tabpanel-image";
 
 const Gallery = ({ images }) => {
   return (
-    <Tab.Group as="div" className="flex flex-col-reverse">
-      <div className="mx-auto mt-4 hidden w-full max-w-2xl sm:block lg:max-w-none">
-        <Tab.List className="grid grid-cols-6 gap-6">
+    <Tab.Group as="div" className="flex">
+      <div className="hidden w-[75px] h-[75px] mx-auto mt-4 sm:block lg:max-w-none z-10 mr-4">
+        <Tab.List className="grid grid-rows-6 gap-6">
           {images.data.map((image) => (
             <GalleryTab key={image.id} image={image} />
           ))}
         </Tab.List>
       </div>
-      <Tab.Panels className="aspect-square w-full">
+      <Tab.Panels className="w-full aspect-square">
         {images.data.map((image) => (
           <TabPanelImage key={image.id} image={image} />
         ))}

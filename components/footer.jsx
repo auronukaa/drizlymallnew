@@ -6,19 +6,19 @@ const Footer = () => {
   return (
     <footer className="bg-white border-t">
       <Container>
-        <div className="grid grid-cols-1 sm:grid-cols-2 my-5">
-          <div className="mx-8 p-5 gap-y-3 flex items-start flex-col">
-            <p className={`font-bold text-2xl tracking-tight`}>
+        <div className="grid grid-cols-1 mt-5 sm:grid-cols-2 mb-14 sm:my-5">
+          <div className="flex flex-col items-start p-5 mx-8 gap-y-3">
+            <p className={`font-bold text-2xl tracking-tighter`}>
               drizly<span className="text-orange-500">mall</span>
             </p>
-            <p className="text-left text-xs text-black">
+            <p className="text-xs text-left text-black">
               &copy; 2023 Drizlymall, Inc. Të gjitha të drejtat të rezervuara
             </p>
-            <div className="flex gap-x-2 items-center">
+            <div className="flex items-center gap-x-2">
               <Link
                 href="https://www.instagram.com/drizlymall/"
                 target="_blank"
-                className="bg-neutral-200 rounded-full p-2"
+                className="p-2 rounded-full bg-neutral-200"
               >
                 <Instagram size={20} />
               </Link>
@@ -60,21 +60,21 @@ const Footer = () => {
               </Link>
             </div>
           </div>
-          <div className="mx-14 sm:mx-8 py-5 gap-y-3 flex-col sm:flex-row flex justify-end items-start gap-x-20">
+          <div className="flex flex-col items-start justify-end py-5 mx-14 sm:mx-8 gap-y-3 sm:flex-row gap-x-20">
             <div className="mb-4 sm:mb-0">
               <h1 className="font-semibold text-left">Për ju</h1>
-              <div className="text-sm flex flex-col text-gray-500 py-2">
+              <div className="flex flex-col py-2 text-sm text-gray-500">
                 <Link href="/produktet" className="hover:underline">
                   Produktet
                 </Link>
-                <Link href="/shporta" className="hover:underline py-1">
+                <Link href="/shporta" className="py-1 hover:underline">
                   Shporta ime
                 </Link>
               </div>
             </div>
             <div>
               <h1 className="font-semibold text-left">Kontakti</h1>
-              <ul className="text-gray-500 py-2 text-sm">
+              <ul className="py-2 text-sm text-gray-500">
                 <li className="py-1">
                   <a
                     href="mailto:drizlymall@gmail.com"

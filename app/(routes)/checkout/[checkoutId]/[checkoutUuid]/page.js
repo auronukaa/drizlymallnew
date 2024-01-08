@@ -12,6 +12,7 @@ export const revalidate = 0;
 const ItemCheckout = () => {
   const checkout = useCheckout((state) => state.checkout);
   const [isMounted, setIsMounted] = useState(false);
+  console.log(checkout);
 
   useEffect(() => {
     setIsMounted(true);
@@ -22,9 +23,9 @@ const ItemCheckout = () => {
   }
 
   return (
-    <div className="bg-white my-16 sm:px-0">
+    <div className="my-16 bg-white sm:px-0">
       <div className="px-4 sm:px-6 mx-auto max-w-[1400px]">
-        <h1 className="my-8 font-bold text-xl sm:text-3xl text-center">
+        <h1 className="my-8 text-xl font-bold text-center sm:text-3xl">
           Produktet për porosinë
         </h1>
         <div className="w-full border border-gray-200 rounded-md">
@@ -33,9 +34,9 @@ const ItemCheckout = () => {
           ))}
 
           {checkout.length === 0 && (
-            <div className="flex flex-col items-center justify-center m-10 p-10 gap-y-10">
+            <div className="flex flex-col items-center justify-center p-10 m-10 gap-y-10">
               <X size={100} className="text-gray-300" />
-              <h1 className="text-gray-300 text-3xl">
+              <h1 className="text-3xl text-gray-300">
                 Nuk keni asnjë produkt në shportë
               </h1>
             </div>

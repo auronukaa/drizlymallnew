@@ -29,7 +29,7 @@ const Products = async () => {
   // });
 
   return (
-    <div className="bg-white">
+    <div className="bg-[#fff]">
       <Container>
         <Billboard />
         {/* <HydrationBoundary state={dehydrate(queryClient)}> */}

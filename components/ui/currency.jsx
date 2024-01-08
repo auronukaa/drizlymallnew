@@ -7,7 +7,7 @@ const formatter = new Intl.NumberFormat("en-US", {
   currency: "EUR",
 });
 
-const Currency = ({ value, price, discount }) => {
+const Currency = ({ value, price, discount, discountTrue }) => {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -19,15 +19,20 @@ const Currency = ({ value, price, discount }) => {
   }
 
   return (
-    <div className="font-semibold flex items-center w-full">
-      <div className="text-base sm:text-xl font-bold">
+    <div className="flex items-center w-full font-semibold">
+      <div className="text-base font-bold sm:text-xl">
         {formatter.format(Number(value))}
       </div>
       {price && (
-        <div className="text-sm sm:text-base flex font-normal items-center justify-between w-full text-neutral-500 ml-2">
-          <div className="line-through">{formatter.format(Number(price))}</div>
+        <div className="flex items-center justify-between w-full ml-2 text-sm font-normal sm:text-base text-neutral-500">
+          {discountTrue && (
+            <div className="line-through">
+              {formatter.format(Number(price))}
+            </div>
+          )}
+
           {discount && (
-            <span className="text-xs sm:text-sm rounded-md text-white no-underline ml-2 bg-orange-600 py-1 px-1 sm:px-2">
+            <span className="px-1 py-1 ml-2 text-xs text-white no-underline bg-orange-600 rounded-md sm:text-sm sm:px-2">
               -{discount}%
             </span>
           )}

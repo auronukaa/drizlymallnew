@@ -3,7 +3,7 @@
 export const getProductsCat2 = async () => {
   const URL =
     process.env.NEXT_APP_API_URL +
-    "/api/products?populate=*&pagination[start]=0&pagination[limit]=4&sort=createdAt:desc";
+    "/api/products?populate=*&pagination[start]=0&pagination[limit]=10&sort=createdAt:desc";
 
   const res = await fetch(URL, {
     headers: {
